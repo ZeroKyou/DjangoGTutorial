@@ -4,7 +4,15 @@
         <title>Roadhouse!</title>
     </head>
     <body>
-        <h1>It works!</h1>
-        <p>Hi there :)</p>
+        <h1>Posts:</h1>
+        {% for post in posts %}
+            <div>
+                <ul>
+                    <li>Title: {{post.title}}</li>
+                    <li>Author: {{post.author}}</li>
+                    <li>Text: {{post.text|linebreaksbr}}</li>
+                </ul>
+            </div>
+        {% endfor %}
     </body>
 </html>
